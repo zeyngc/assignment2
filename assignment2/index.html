@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Zeyn's Pizzeria Order Form">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Zeyn's Pizzeria</title>
+
+    <!-- adding google fonts --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- adding CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<header>
+    <!-- logo to return to index.html / homepage -->
+    <div>
+        <a href="index.html"><img src = "./img/logo.jpeg" alt="Zeyn's Pizzeria Logo"></a>
+    </div>
+    <h1>Zeyn's Pizzeria Order Form</h1>
+</header>
+
+<main>
+    <section>
+        <!-- setting class for css -->
+        <div class="quantity">
+            <!-- underlining all subheaders for visibilty -->
+            <h3><u>1. Quantity</u></h3>
+            <!-- sending input data from the quantity selection to the php file -->
+            <form action="./php/data.php" method="POST">
+                <label for="pizzaAmount"></label>
+                <select name="pizzaAmount" id="pizzaAmount" required> <!-- quantity is required -->
+                    <!-- 1st option value is left empty as it is the default option -->
+                    <option value>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </form>
+            <p>For any catering sized orders, please phone the store.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="size">
+            <h3><u>2. Size of Pizza</u></h3>
+            <form action="/php/data.php" method="POST">
+                <!-- required as the pizza needs a size, and checked to ensure that the user selects an option -->
+                 <!-- radio used as only 1 size can be selected -->
+                <input type="radio" name="size_of_pizza" value="small" id="small" required checked> <!-- only 1 input parameter needs required so long as the name parameter is the same value -->
+                <label for="small">Small</label>
+                <input type="radio" name="size_of_pizza" value="medium" id="medium">
+                <label for="medium">Medium</label>
+                <input type="radio" name="size_of_pizza" value="large" id="large">
+                <label for="large">Large</label>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="sauce">
+            <h3><u>3. Sauce</u></h3>
+            <form action="php/data.php" method="POST">
+                <!-- not required as some people prefer no sauce -->
+                <!-- radio used since only 1 sauce can be selected -->
+                <input type="radio" name="sauce_of_pizza" value="pizza_sauce" id="pizza_sauce">
+                <label for="pizza_sauce">Pizza Sauce</label>
+                <input type="radio" name="sauce_of_pizza" value="BBQ_sauce" id="BBQ_sauce">
+                <label for="BBQ_sauce">BBQ Sauce</label>
+                <input type="radio" name="sauce_of_pizza" value="ranch" id="ranch">
+                <label for="ranch">Ranch</label>
+                <input type="radio" name="sauce_of_pizza" value="marinara_sauce" id="marinara_sauce">
+                <label for="marinara_sauce">Marinara Sauce</label>
+            </form>
+            <p>Additional costs are added onto Ranch and BBQ Sauce.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="crust">
+            <h3><u>4. Crust</u></h3>
+            <form action="php/data.php" method="POST">
+                <!-- radio used since only 1 crust can be selected -->
+                <!-- requiring crust to be selected by putting it in first input, checking classic as it would be more commonly selected over thin-->
+                <input type="radio" name="crust_of_pizza" value="thin" id="thin" required>
+                <label for="thin">Thin</label>
+                <input type="radio" name="crust_of_pizza" value="classic" id="classic" checked>
+                <label for="classic">Classic</label>
+                <input type="radio" name="crust_of_pizza" value="deep_dish" id="deep_dish">
+                <label for="deep_dish">Deep Dish</label>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="toppings">
+            <h3><u>5. Toppings</u></h3>
+            <form action="php/data.php" method="POST">
+                <!-- checkbox used as multiple toppings can be selected, not required as some may opt for none -->
+                <input type="checkbox" name="ifCheese" id="cheese" value="Cheese">
+                <label for="cheese">Cheese</label>
+                <input type="checkbox" name="ifPepperoni" id="pepperoni" value="Pepperoni">
+                <label for="pepperoni">Pepperoni</label>
+                <input type="checkbox" name="ifHam" id="ham" value="Ham">
+                <label for="ham">Ham</label>
+                <input type="checkbox" name="ifPineapple" id="pineapple" value="Pineapple">
+                <label for="pineapple">Pineapple</label>
+                <input type="checkbox" name="ifPepper" id="pepper" value="pepper">
+                <label for="pepper">Bell Peppers</label>
+                <input type="checkbox" name="ifAnchovy" id="anchovy" value="Anchovies">
+                <label for="anchovy">Anchovies</label>
+            </form>
+            <p>First 3 toppings are free. Any additional toppings are <mark>$0.99</mark> each.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="submitButton">
+        <form action="php/data.php" method="POST">
+        <input type="submit" name="submit" id="submit" value="Submit Order">
+        </form>
+        </div>
+    </section>
+
+
+</main>
+
+<footer>
+    <h6>By Zeyn Hirji |
+        200613627
+    </h6>
+</footer>
+
+</body>
+</html>

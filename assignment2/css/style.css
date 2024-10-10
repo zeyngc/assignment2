@@ -1,0 +1,79 @@
+body{
+    background-color: #f3f3f3;
+    display: grid;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+
+    /* centering everything */
+    align-items: center;
+    text-align: center;
+}
+/* changing font-familys for all used types */
+h1,h2,h3,h4,h5,h6{
+    font-family: "Space Grotesk", sans-serif; /* using sans-serif as a backup for all fonts */
+}
+p{
+    font-family: "Roboto", sans-serif;
+}
+label{
+    font-family: "Roboto", sans-serif;
+}
+h3{
+    /* making subheading font bigger for visibility */
+    font-size: 25px;
+}
+header > div{
+    background-color: #333;
+    display: grid;
+    padding: 0;
+    gap: 0;
+    margin: 0;
+}
+.quantity > form > select{
+    /* making the quantity box bigger and bolding the number inside for visibility */
+    width: 50px;
+    font-weight: bold;
+}
+.size > form > label:hover{
+    /* when the label is being hovered over, it's background colour darkens for display purposes */
+    background: #ddd;
+}
+.quantity > p{
+    /* making additional text smaller as it is not needed to be as large as the labels */
+    display: grid;
+    text-align: center;
+    font-size: 14px;
+}
+.sauce > form > label:hover{
+    /* same as above hover class, when hovered over, darken bg for visibility */
+    background: #ddd;
+}
+.sauce > p{
+    /* same as above class */
+    display: grid;
+    text-align: center;
+    font-size: 14px;
+    /* moving paragraph font away from options for visiblity */
+    padding-top: 10px;
+    /* if just padding was used, it would also space it out from the bottom, thus padding-top is used */
+}
+.crust > form > label:hover{
+    /* same as above hover class, when hovered over, darken bg for visibility */
+    background: #ddd;
+}
+.toppings > p{
+    font-size: 14px;
+    padding-top: 10px;
+    /* moving label from submit button even more */
+    padding-bottom: 15px;
+}
+.submitButton{
+    /* moving submit button from footer */
+    padding-bottom: 100px;
+}
+footer{
+    background-color: #ccc;
+    padding-top: 0px;
+    margin: 0px;
+}
